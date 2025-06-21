@@ -1,7 +1,7 @@
 pages:
   script:
     - mkdir public
-    - cp -r !(public) public
+    - rsync -av --exclude public ./ public
   artifacts:
     paths:
       - public

@@ -1,7 +1,7 @@
 pages:
   script:
     - mkdir public
-    - rsync -av --exclude public ./ public
+    - find . -maxdepth 1 ! -name public ! -name . -exec cp -r {} public/ \;
   artifacts:
     paths:
       - public

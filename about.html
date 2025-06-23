@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>About Me - Habeeb Adenle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
   <style>
     body {
       font-family: 'Merriweather', serif;
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 20px;
       background-color: #f9f9f9;
       color: #222;
       line-height: 1.8;
@@ -18,7 +18,29 @@
     h1 {
       text-align: center;
       font-size: 2.2em;
-      margin-bottom: 0.5em;
+      margin-bottom: 1em;
+    }
+    .about-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .about-image {
+      flex: 0 0 200px;
+      max-width: 200px;
+      margin: 0 20px 20px 0;
+    }
+    .about-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+    .about-text {
+      flex: 1;
+      min-width: 250px;
     }
     p {
       text-align: justify;
@@ -34,24 +56,40 @@
     a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 600px) {
+      .about-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .about-image {
+        margin: 0 0 20px 0;
+      }
+    }
   </style>
 </head>
+
 <body>
   <h1>About Me</h1>
 
-  <img src="assets/mypics.png" alt="Habeeb Adenle" style="float: right; width: 200px; height: auto; margin-left: 20px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1);">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="assets/mypics.png" alt="Habeeb Adenle">
+    </div>
+    <div class="about-text">
+      <p>Habeeb Adenle is a Ph.D. candidate in Physics Engineering at Louisiana Tech University, specializing in High Energy Physics with a research focus on the ATLAS experiment at CERN. Under the mentorship of Dr. Lee Sawyer, he works on jet timing and cleaning, calorimeter timing calibration, and large-scale data analysis in Run 3 of the LHC.</p>
 
+      <p>Habeeb has over two years of experience in measuring Standard Model particles and searching for signals beyond the Standard Model (BSM). His recent work involves analyzing proton-proton collisions, developing event classifiers, and contributing to physics validation and software development in the ATLAS collaboration.</p>
 
-  <p>Habeeb Adenle is a Ph.D. candidate in Physics Engineering at Louisiana Tech University, specializing in High Energy Physics with a research focus on the ATLAS experiment at CERN. Under the mentorship of Dr. Lee Sawyer, he works on jet timing and cleaning, calorimeter timing calibration, and large-scale data analysis in Run 3 of the LHC.</p>
+      <p>In addition to his core Ph.D. research, Habeeb has participated in cutting-edge machine learning workshops through the US ATLAS Early Career Scientist group, including CAMPFIRE at Argonne National Lab and ML4FP at Lawrence Berkeley Lab, working on Z→ee identification using ML models.</p>
 
-  <p>Habeeb has over two years of experience in measuring Standard Model particles and searching for signals beyond the Standard Model (BSM). His recent work involves analyzing proton-proton collisions, developing event classifiers, and contributing to physics validation and software development in the ATLAS collaboration.</p>
+      <p>Before joining Louisiana Tech, Habeeb earned a Master’s degree in Applied Physics from the University of Lagos, Nigeria, where he investigated ionospheric irregularities affecting space communication systems and radio signal propagation during geomagnetic storms.</p>
 
-  <p>In addition to his core Ph.D. research, Habeeb has participated in cutting-edge machine learning workshops through the US ATLAS Early Career Scientist group, including CAMPFIRE at Argonne National Lab and ML4FP at Lawrence Berkeley Lab, working on Z→ee identification using ML models.</p>
-
-  <p>Before joining Louisiana Tech, Habeeb earned a Master’s degree in Applied Physics from the University of Lagos, Nigeria, where he investigated ionospheric irregularities affecting space communication systems and radio signal propagation during geomagnetic storms.</p>
-
-  <p>He is passionate about advancing particle physics, mentoring early-career researchers, and promoting African excellence in STEM. He served as President of the African Students Association at Louisiana Tech and is a member of the National Society of Leadership and Success (NSLS).</p>
+      <p>He is passionate about advancing particle physics, mentoring early-career researchers, and promoting African excellence in STEM. He served as President of the African Students Association at Louisiana Tech and is a member of the National Society of Leadership and Success (NSLS).</p>
+    </div>
+  </div>
 
   <a href="index.html">← Back to Home</a>
 </body>
 </html>
+
